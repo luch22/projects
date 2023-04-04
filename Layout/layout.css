@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+body {
+  background: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  padding-top: 15vh;
+}
+body .background {
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  background-color: rgb(25, 161, 173);
+  height: 720px;
+  width: 1440px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+body .background .cercle_top {
+  background: url(profile-card-component-main/images/bg-pattern-top.svg);
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 978px;
+  width: 978px;
+  top: -71.9%;
+  left: -20%;
+  z-index: 1;
+}
+body .background .cercle_bot {
+  background: url(profile-card-component-main/images/bg-pattern-bottom.svg);
+  position: absolute;
+  height: 978px;
+  width: 978px;
+  bottom: -87%;
+  right: -17.5%;
+  z-index: 1;
+}
+body .background .container {
+  z-index: 2;
+  position: relative;
+  background: white;
+  border-radius: 15px;
+  width: 350px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+body .background .container .block_top {
+  height: 37.3%;
+  border-radius: 15px 15px 0 0;
+  background: url(profile-card-component-main/images/bg-pattern-card.svg);
+  width: 100%;
+  padding-bottom: 30px;
+  -webkit-margin-after: 30px;
+          margin-block-end: 30px;
+}
+body .background .container .block_mid {
+  padding-top: 40px;
+  height: 38.6%;
+  width: 100%;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .background .container .block_mid span {
+  display: block;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
+}
+body .background .container .block_mid .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body .background .container .block_mid .info h3 {
+  font-size: 1rem;
+  padding: 0;
+  padding-right: 10px;
+  font-weight: 700;
+}
+body .background .container .block_bot {
+  height: 24.1%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 2px solid lightgray;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .background .container .block_bot span {
+  font-size: 0.7rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+body .background .container .block_bot span h3 {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0 0 5px 0;
+  font-weight: 700;
+}
+body .background .container .image {
+  position: absolute;
+  background: url("profile-card-component-main/images/image-victor.jpg") no-repeat center;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  z-index: 3;
+  border-radius: 80px;
+  top: 70px;
+  border: solid white 6px;
+}/*# sourceMappingURL=layout.css.map */

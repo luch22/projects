@@ -1,0 +1,35 @@
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 0.8rem;
+    background: red;
+  }
+  #medium,
+  #large,
+  #small {
+    display: block;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  body {
+    font-size: 1.5rem;
+    background: green;
+  }
+  #small {
+    width: 66%;
+  }
+  #medium {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 2rem;
+    background: blue;
+  }
+  #small,
+  #medium,
+  #large {
+    width: 32.5%;
+    display: inline-block;
+  }
+}

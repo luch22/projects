@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+$hauteurcercle: 135.8333333333%;
+$largeurcercle: 67.9166666667%;
+
+body {
+  background: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  padding-top: 15vh;
+  // max-width: ;
+  // max-height: ;
+
+  .background {
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    // padding: 170px 0 170px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 0;
+    background-color: rgb(25, 161, 173);
+    //   background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgb(25, 161, 173));
+    height: 720px;
+    width: 1440px;
+
+    font-family: "Kumbh Sans", sans-serif;
+    .cercle_top {
+      background: url(profile-card-component-main/images/bg-pattern-top.svg);
+      // background-color: red;
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+      height: 978px;
+      width: 978px;
+      top: -71.9%;
+      left: -20%;
+      z-index: 1;
+    }
+    .cercle_bot {
+      background: url(profile-card-component-main/images/bg-pattern-bottom.svg);
+
+      // background-color: red;
+      position: absolute;
+      height: 978px;
+      width: 978px;
+      bottom: -87%;
+      right: -17.5%;
+      z-index: 1;
+    }
+    .container {
+      z-index: 2;
+      position: relative;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+
+      background: white;
+      border-radius: 15px;
+      width: 350px;
+      height: 370px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-around;
+
+      .block_top {
+        height: 37.3%;
+        border-radius: 15px 15px 0 0;
+        background: url(profile-card-component-main/images/bg-pattern-card.svg);
+        width: 100%;
+        padding-bottom: 30px;
+        margin-block-end: 30px;
+      }
+      .block_mid {
+        padding-top: 40px;
+        height: 38.6%;
+        width: 100%;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        span {
+          display: block;
+          letter-spacing: 1px;
+          font-weight: 400;
+          text-align: center;
+        }
+
+        .info {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+          h3 {
+            font-size: 1rem;
+            padding: 0;
+            padding-right: 10px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .block_bot {
+        height: 24.1%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-top: 2px solid lightgray;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        span {
+          font-size: 0.7rem;
+          text-align: center;
+          letter-spacing: 2px;
+          font-weight: 400;
+          h3 {
+            font-size: 1.2rem;
+            padding: 0;
+            margin: 0 0 5px 0;
+            font-weight: 700;
+          }
+        }
+      }
+      .image {
+        position: absolute;
+        background: url("profile-card-component-main/images/image-victor.jpg")
+          no-repeat center;
+        background-size: cover;
+        height: 100px;
+        width: 100px;
+        z-index: 3;
+        border-radius: 80px;
+        top: 70px;
+
+        border: solid white 6px;
+      }
+    }
+  }
+}

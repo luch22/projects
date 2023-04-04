@@ -1,0 +1,97 @@
+%td {
+  border: 3px solid rgb(150, 188, 14);
+  border-radius: 5px;
+}
+$offset: -80px;
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgb(72, 127, 129), rgb(107, 32, 63));
+
+  .tableau {
+    width: 100%;
+    background: rgba(145, 145, 145, 0.736);
+    color: white;
+    border: 3px solid black;
+  }
+  tbody {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: content-box;
+
+    td {
+      &:first-child {
+        width: 15%;
+        border: 2px dotted rgb(36, 229, 250);
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .popup {
+    color: transparent;
+    margin: 10px;
+    padding: 5px;
+    &:hover {
+      .monImage {
+        background-size: 150%;
+        .parent {
+          /* HOVER ON */
+          -webkit-transition: all 1.5s ease-out;
+          transition: all 0.5s ease-out;
+          color: black;
+          height: 300px;
+          background-color: rgba(255, 255, 255, 0.643);
+        }
+      }
+    }
+
+    .monImage {
+      padding: 0 30px 0 30px;
+      border-radius: 5px;
+      height: 500px;
+      position: relative;
+      background: url(image/Bouvier\ Bernois.jpg) center/cover no-repeat;
+      .titre {
+        border: 1px solid black;
+        top: 35px;
+        position: absolute;
+        left: 50%;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        background: url(image/suisse.png) no-repeat;
+        border-radius: 30px;
+        background-size: auto;
+        background-position: center;
+
+        transform: translate(-50%, -50%);
+      }
+
+      .parent {
+        padding: 20px;
+        border-radius: 15px;
+        /* HOVER OFF */
+
+        -webkit-transition: padding 2s;
+        transition: all 0.4s;
+        position: absolute;
+        height: 250px;
+        bottom: 0px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+          "txt1 txt2 txt3"
+          "txt4 txt4 txt5"
+          "txt4 txt4 txt5";
+        @for $i from 1 through 5 {
+          .monTxt#{$i} {
+            padding: 3px;
+            grid-area: txt + $i;
+          }
+        }
+      }
+    }
+  }
+}

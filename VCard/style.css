@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&display=swap");
+
+body {
+  background: linear-gradient(37deg, rgb(5, 23, 85), rgb(143, 24, 15));
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+}
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 8vw;
+  text-shadow: 6px 6px 6px black;
+}
+
+main {
+  min-height: 500px;
+  width: 90%;
+  background: rgba(245, 245, 245, 0.4);
+  margin: 0 auto;
+  border: 2px solid rgb(167, 18, 78);
+  border-radius: 20px 60px;
+  box-shadow: -6px -6px 20px 12px;
+  padding: 20px;
+}
+h2 {
+  margin: 0;
+}
+.flexbox,
+.grid,
+.absolute {
+  border: 2px solid skyblue;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 20px;
+  min-height: 150px;
+}
+.flexbox ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.flexbox li {
+  list-style: none;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid img {
+  margin: 20px auto;
+  width: 80%;
+  display: block;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+    
+}
+
+input,
+textarea {
+  margin: 5px;
+  border: 1px solid purple;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+textarea {
+  grid-area: ta;
+  height: 40px;
+  resize: none;
+}
+
+#btn-submit {
+  grid-area: bt;
+  cursor: pointer;
+  background: linear-gradient(-101deg, rgb(221, 114, 23), rgb(123, 17, 206));
+}
+
+#btn-submit:hover {
+  color: white;
+  border: 3px solid white;
+  background: linear-gradient(101deg, rgb(221, 114, 23), rgb(123, 17, 206));
+}
+.absolute {
+  position: relative;
+}
+#circle1 {
+  height: 40px;
+  width: 40px;
+  background: orangered;
+  position: absolute;
+  border-radius: 0 15px 0 30px;
+  top: -2px;
+  right: -2px;
+}
+#circle2 {
+  height: 40px;
+  width: 40px;
+  background: teal;
+  position: absolute;
+  border-radius: 0 15px 0 30px;
+  top: 3px;
+  right: 3px;
+}
+@media screen and (max-width: 810px) {
+  .grid-container {
+    display: block;
+  }
+  .grid-container img {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 550px) {
+  form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "i1"
+      "i2"
+      "ta"
+      "bt";
+  }
+}
+@media screen and (max-width: 666px) {
+  .flexbox ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 380px) {
+  input,
+  textarea {
+    font-size: 0.7rem;
+  }
+}
