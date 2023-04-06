@@ -202,23 +202,32 @@ body section .txt .learn_more {
   font-family: "Fraunces", serif;
   font-weight: 900;
   text-decoration: none;
+  font-size: 0.8rem;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   position: relative;
   flex-direction: column;
   z-index: 1;
 }
+body section .txt .learn_more .yellow {
+  background-color: #fef2ba;
+}
+body section .txt .learn_more .pink {
+  background-color: #fe7766;
+}
 body section .txt .learn_more .yellow,
 body section .txt .learn_more .pink {
-  border-radius: 35px;
+  border-radius: 28px;
   overflow: hidden;
   z-index: -1;
   left: 0px;
-  top: 4px;
+  top: 8px;
   position: absolute;
   width: 100%;
   border: none;
   color: white;
   height: 8px;
-  background-color: #fef2ba;
 }
 body section .txt span {
   color: #808397;
@@ -414,4 +423,23 @@ body footer .footer_info ul {
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    width: 1440px;
+  }
+  body header {
+    position: relative;
+    width: 1440px;
+    height: 800px;
+  }
+  body header nav {
+    width: inherit;
+  }
+  body header .arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=style.css.map */
