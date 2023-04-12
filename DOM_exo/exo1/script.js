@@ -10,8 +10,7 @@ console.log(getRandom());
 
 document.title = "Ceci est le titre";
 
-document.body.style.backgroundColor =
-  "rgb(" + getRandom() + "," + getRandom() + "," + getRandom() + ")";
+document.body.style.backgroundColor = `rgb(${getRandom()}, ${getRandom()}, ${getRandom()})`;
 
 console.log(document.body.style.backgroundColor);
 console.log(document.title);
