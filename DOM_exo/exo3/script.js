@@ -28,7 +28,7 @@ let myarray = [
   "willy",
 ];
 let n = myarray.length;
-let randomIndex = Math.floor(Math.random() * (n + 1)); // generate random index including the end of the array
+// let randomIndex = Math.floor(Math.random() * (n + 1)); // generate random index including the end of the array
 
 for (let i = n - 1; i > 0; i--) {
   let j = Math.floor(Math.random() * (i + 1)); // generate random index to swap with
@@ -36,13 +36,13 @@ for (let i = n - 1; i > 0; i--) {
 }
 
 let article = document.querySelector("article");
+myarray.forEach;
 
 myarray.forEach((i) => {
   let section = document.createElement("section");
   let paragraphe = document.createElement("p");
   paragraphe.textContent = i;
-  section.style.backgroundColor =
-    "rgb(" + getRandom() + "," + getRandom() + "," + getRandom() + ")";
+  section.style.backgroundColor = `rgb(${getRandom()}, ${getRandom()}, ${getRandom()})`;
 
   var rgbValues = section.style.backgroundColor
     .replace("rgb(", "")
