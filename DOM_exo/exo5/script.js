@@ -58,10 +58,8 @@ document.body.addEventListener("keydown", (event) => {
 //   element.addEventListener("click", displayAlert);
 // });
 
-const squareDisplay = document.querySelectorAll(".displayedsquare-wrapper");
-squareDisplay.forEach((element) => {
+document.querySelectorAll(".displayedsquare-wrapper").forEach((element) => {
   element.addEventListener("click", (e) => {
-    console.log(e.target.classList[1]);
     if (["green", "orange", "violet"].includes(e.target.classList[1]))
       alert(e.target.classList[1]);
   });
