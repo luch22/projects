@@ -47,14 +47,22 @@ document.body.addEventListener("keydown", (event) => {
     });
   }
 });
-const displayAlert = (e) => {
-  console.log(e.target.classList[1]);
-  let lcolor = ["green", "orange", "violet"];
-  if (lcolor.includes(e.target.classList[1])) alert(e.target.classList[1]);
-};
+// const displayAlert = (e) => {
+//   console.log(e.target.classList[1]);
+//   let lcolor = ["green", "orange", "violet"];
+//   if (lcolor.includes(e.target.classList[1])) alert(e.target.classList[1]);
+// };
+
+// const squareDisplay = document.querySelectorAll(".displayedsquare-wrapper");
+// squareDisplay.forEach((element) => {
+//   element.addEventListener("click", displayAlert);
+// });
 
 const squareDisplay = document.querySelectorAll(".displayedsquare-wrapper");
 squareDisplay.forEach((element) => {
-  console.log("test");
-  element.addEventListener("click", displayAlert);
+  element.addEventListener("click", (e) => {
+    console.log(e.target.classList[1]);
+    if (["green", "orange", "violet"].includes(e.target.classList[1]))
+      alert(e.target.classList[1]);
+  });
 });
